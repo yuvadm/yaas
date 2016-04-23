@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YaaS</title>
+  </head>
+  <body>
+    <h1>YaaS</h1>
+    <p>Paste a valid youtube URL</p>
+    <form action="/upload" method="POST">
+        <input name="url" type="text"></input>
+        <input name="submit" type="submit" value="Upload"></input>
+    </form>
+    <ul>
+    {% for v in vids %}
+        <li><a href="/static/vids/{{ v }}">{{ v }}</a></li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>
